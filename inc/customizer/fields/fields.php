@@ -14,17 +14,17 @@
  ***********************************/
 
  // Theme color field
-Epsilon_Customizer::add_field(
-    'creativeagency_theme_color',
-    array(
-        'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Theme Color', 'creativeagency' ),
-        'description' => esc_html__( 'Select the theme color.', 'creativeagency' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'section'     => 'creativeagency_general_section',
-        'default'     => '#131313',
-    )
-);
+// Epsilon_Customizer::add_field(
+//     'creativeagency_theme_color',
+//     array(
+//         'type'        => 'epsilon-color-picker',
+//         'label'       => esc_html__( 'Theme Color', 'creativeagency' ),
+//         'description' => esc_html__( 'Select the theme color.', 'creativeagency' ),
+//         'sanitize_callback' => 'sanitize_text_field',
+//         'section'     => 'creativeagency_general_section',
+//         'default'     => '#131313',
+//     )
+// );
 
 // Header button label
 Epsilon_Customizer::add_field(
@@ -55,24 +55,24 @@ Epsilon_Customizer::add_field(
     'creativeagency_book_btn_color',
     array(
         'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Header Button Color', 'creativeagency' ),
+        'label'       => esc_html__( 'Header Anchor Color', 'creativeagency' ),
         'description' => esc_html__( 'Select the color.', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
-        'default'     => '#131313',
+        'default'     => '#1F1F1F',
     )
 );
 
 // Header book button hover bg color
 Epsilon_Customizer::add_field(
-    'creativeagency_book_btn_hvr_bg_color',
+    'creativeagency_book_btn_border_color',
     array(
         'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Header Button Hover Bg Color', 'creativeagency' ),
+        'label'       => esc_html__( 'Header Anchor Border Color', 'creativeagency' ),
         'description' => esc_html__( 'Select the color.', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
-        'default'     => '#131313',
+        'default'     => '#FFCB00',
     )
 );
 
@@ -109,6 +109,18 @@ Epsilon_Customizer::add_field(
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
         'default'     => '#131313',
+    )
+);
+
+// Header nav menu color field
+Epsilon_Customizer::add_field(
+    'creativeagency_header_menu_border_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Header menu Border color', 'creativeagency' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'creativeagency_header_section',
+        'default'     => '#00A7FF',
     )
 );
 
@@ -194,154 +206,6 @@ Epsilon_Customizer::add_field(
     )
 );
 
-// Footer Social Profile section
-Epsilon_Customizer::add_field(
-    'footer_social_profile_separator',
-    array(
-        'type'        => 'epsilon-separator',
-        'label'       => esc_html__( 'Footer Social Profile Section', 'creativeagency' ),
-        'section'     => 'creativeagency_footer_section',
-
-    )
-);
-
-// Social Profiles Show/Hide
-Epsilon_Customizer::add_field(
-    'creativeagency_social_profile_toggle',
-    array(
-        'type'        => 'epsilon-toggle',
-        'label'       => esc_html__( 'Social Profile Show/Hide', 'creativeagency' ),
-        'section'     => 'creativeagency_footer_section',
-        'default'     => true,
-    )
-);
-
-// Footer Social Profile links
-Epsilon_Customizer::add_field(
-	'creativeagency_social_profiles',
-	array(
-		'type'         => 'epsilon-repeater',
-		'section'      => 'creativeagency_footer_section',
-		'label'        => esc_html__( 'Social Profile Links', 'creativeagency' ),
-        'button_label' => esc_html__( 'Add new social link', 'creativeagency' ),
-		'row_label'    => array(
-			'type'  => 'field',
-			'field' => 'social_link_title',
-		),
-		'default'      => [
-            [
-                'social_link_title' => esc_html__( 'Facebook', 'creativeagency' ),
-                'social_url'  => '#',
-                'social_icon'  => 'fa fa-facebook',
-            ],
-            [
-                'social_link_title' => esc_html__( 'Twitter', 'creativeagency' ),
-                'social_url'  => '#',
-                'social_icon'  => 'fa fa-twitter',
-            ],
-            [
-                'social_link_title' => esc_html__( 'Instagram', 'creativeagency' ),
-                'social_url'  => '#',
-                'social_icon'  => 'fa fa-instagram',
-            ],
-        ],
-		'fields'       => array(
-			'social_link_title'       => array(
-				'label'             => esc_html__( 'Title', 'creativeagency' ),
-				'type'              => 'text',
-				'sanitize_callback' => 'wp_kses_post',
-				'default'           => 'Facebook',
-			),
-			'social_url' => array(
-				'label'             => esc_html__( 'Social URL', 'creativeagency' ),
-				'type'              => 'text',
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '#',
-			),
-			'social_icon'        => array(
-				'label'   => esc_html__( 'Icon', 'creativeagency' ),
-				'type'    => 'epsilon-icon-picker',
-				'default' => 'fa fa-facebook',
-			),
-			
-		),
-	)
-);
- 
-/***********************************
- * Footer Reservation Section
- ***********************************/
-
-// Footer Reservation section
-Epsilon_Customizer::add_field(
-    'footer_reservation_separator',
-    array(
-        'type'        => 'epsilon-separator',
-        'label'       => esc_html__( 'Footer Reservation Section', 'creativeagency' ),
-        'section'     => 'creativeagency_footer_section',
-
-    )
-);
-
-// Footer reservation toggle field
-Epsilon_Customizer::add_field(
-    'creativeagency_footer_reservation_toggle',
-    array(
-        'type'        => 'epsilon-toggle',
-        'label'       => esc_html__( 'Footer reservation show/hide', 'creativeagency' ),
-        'description' => esc_html__( 'Toggle to display footer reservation.', 'creativeagency' ),
-        'section'     => 'creativeagency_footer_section',
-        'default'     => true,
-    )
-);
-
-// Reservation title field
-Epsilon_Customizer::add_field(
-    'creativeagency_reservation_title',
-    array(
-        'type'              => 'text',
-        'label'             => esc_html__( 'Reservation title', 'creativeagency' ),
-        'section'           => 'creativeagency_footer_section',
-        'sanitize_callback' => 'sanitize_text_field',
-        'default'           => esc_html__( 'Do youn have any project or Query ?', 'creativeagency' ),
-    )
-);
-
-// Reservation sub title field
-Epsilon_Customizer::add_field(
-    'creativeagency_reservation_sub_title',
-    array(
-        'type'              => 'textarea',
-        'label'             => esc_html__( 'Reservation sub title', 'creativeagency' ),
-        'section'           => 'creativeagency_footer_section',
-        'sanitize_callback' => 'sanitize_text_field',
-        'default'           => esc_html__( 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt.', 'creativeagency' ),
-    )
-);
-
-// Reservation Button Text field
-Epsilon_Customizer::add_field(
-    'creativeagency_reservation_btn_text',
-    array(
-        'type'              => 'text',
-        'label'             => esc_html__( 'Reservation Button Text', 'creativeagency' ),
-        'section'           => 'creativeagency_footer_section',
-        'sanitize_callback' => 'sanitize_text_field',
-        'default'           => esc_html__( 'Contact Us', 'creativeagency' ),
-    )
-);
-
-// Reservation Button URL field
-Epsilon_Customizer::add_field(
-    'creativeagency_reservation_btn_url',
-    array(
-        'type'              => 'text',
-        'label'             => esc_html__( 'Reservation Button URL', 'creativeagency' ),
-        'section'           => 'creativeagency_footer_section',
-        'sanitize_callback' => 'sanitize_text_field',
-        'default'           => esc_html__( '#', 'creativeagency' ),
-    )
-);
  
 /***********************************
  * 404 Page Section Fields
@@ -463,7 +327,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Widget Bg Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
-        'default'     => '#1f1b1b',
+        'default'     => '#000000',
     )
 );
 
@@ -487,7 +351,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Text Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
-        'default'     => '#a3a3a3',
+        'default'     => '#C7C7C7',
     )
 );
 
@@ -499,7 +363,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Anchor Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
-        'default'     => '#9e9e9e',
+        'default'     => '#ffffff',
     )
 );
 
@@ -511,7 +375,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Anchor Hover Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
-        'default'     => '#ffffff',
+        'default'     => '#00A7FF',
     )
 );
 

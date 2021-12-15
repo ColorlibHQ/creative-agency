@@ -39,14 +39,14 @@ $sections = array(
     /**
      * General Section
      */
-    array(
-        'id'   => 'creativeagency_general_section',
-        'args' => array(
-            'title'    => esc_html__( 'General', 'creativeagency' ),
-            'panel'    => 'creativeagency_theme_options_panel',
-            'priority' => 1,
-        ),
-    ),
+    // array(
+    //     'id'   => 'creativeagency_general_section',
+    //     'args' => array(
+    //         'title'    => esc_html__( 'General', 'creativeagency' ),
+    //         'panel'    => 'creativeagency_theme_options_panel',
+    //         'priority' => 1,
+    //     ),
+    // ),
 
     /**
      * Social Profiles Section

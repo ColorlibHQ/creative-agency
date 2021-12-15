@@ -116,6 +116,9 @@ final class Creative_Agency {
 		// Message image size
 		add_image_size( 'creativeagency_message_img_585x700', 585, 700, true );
 
+		// Instagram image size
+		add_image_size( 'creativeagency_instagram_thumb_380x400', 380, 400, true );
+
 		// Latest post thumbnail size
 		add_image_size( 'creativeagency_widget_post_thumb', 80, 80, true );
 

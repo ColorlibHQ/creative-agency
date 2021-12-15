@@ -13,14 +13,15 @@ if( !defined( 'ABSPATH' ) ){
 
 $circle_img1 = CREATIVE_AGENCY_DIR_IMGS_URI . 'circle-img-1.png';
 $circle_img2 = CREATIVE_AGENCY_DIR_IMGS_URI . 'circle-img-2.png';
+$dynamic_class = is_singular('project') ? ' minus-padd' : '';
 ?>
 
     <!-- agency_heading_start -->
-    <div class="agency_heading">
+    <div class="agency_heading<?php echo esc_attr( $dynamic_class )?>">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="agency_text text-uppercase">
+                    <div class="agency_text">
                         <h3>
                             <?php
                                 if ( is_category() ) {

@@ -20,8 +20,8 @@ function creativeagency_common_custom_css(){
 		$whiteColor     		  	= '#ffffff';
 		$themeColor     		  	= creativeagency_opt( 'creativeagency_theme_color' ) != '#131313' ? creativeagency_opt( 'creativeagency_theme_color' ) : '';
 		$themeSecColor     		  	= '';
-		$bookBtnColor       		= creativeagency_opt( 'creativeagency_book_btn_color' ) != '#131313' ? creativeagency_opt('creativeagency_book_btn_color') : '';
-		$bookBtnHoverBgColor     	= creativeagency_opt( 'creativeagency_book_btn_hvr_bg_color' ) != '#131313' ? creativeagency_opt('creativeagency_book_btn_hvr_bg_color') : $themeColor;
+		$bookBtnColor       		= creativeagency_opt( 'creativeagency_book_btn_color' ) != '#1F1F1F' ? creativeagency_opt('creativeagency_book_btn_color') : '';
+		$bookBtnBorderColor     	= creativeagency_opt( 'creativeagency_book_btn_border_color' ) != '#FFCB00' ? creativeagency_opt('creativeagency_book_btn_border_color') : $themeColor;
 		$hoverColor     	  	  = creativeagency_opt( 'creativeagency_quote_btn_hvr_text_color');
 
 		$headerTop_bg     		  = '';
@@ -31,6 +31,7 @@ function creativeagency_common_custom_css(){
 		$headerTopBg      		  = creativeagency_opt( 'creativeagency_top_header_bg_color');
 		$headerBg          		  = creativeagency_opt( 'creativeagency_header_bg_color') != '#ffffff' ? creativeagency_opt( 'creativeagency_header_bg_color') : '';
 		$menuColor          	  = creativeagency_opt( 'creativeagency_header_menu_color' ) != '#131313' ? creativeagency_opt('creativeagency_header_menu_color') : '';
+		$menuBorderColor          	  = creativeagency_opt( 'creativeagency_header_menu_border_color' ) != '#00A7FF' ? creativeagency_opt('creativeagency_header_menu_border_color') : '';
 		$menuHoverColor           = creativeagency_opt( 'creativeagency_header_menu_hover_color' ) != '#808080' ? creativeagency_opt('creativeagency_header_menu_hover_color') : $themeColor;
 		$menuFixedHoverColor      = creativeagency_opt( 'creativeagency_header_menu_fixed_hover_color' );
 		$dropMenuBgColor          = creativeagency_opt( 'creativeagency_header_drop_menu_bg_color' ) != '#ffffff' ? creativeagency_opt('creativeagency_header_drop_menu_bg_color') : $themeColor;
@@ -48,7 +49,7 @@ function creativeagency_common_custom_css(){
 		$fofttwocolor			  = creativeagency_opt('creativeagency_fof_texttwo_color');
 
 		$bannerBtnHeaderSpanColor = $themeColor != '#ff5e13' ? $themeColor : '';
-		$footerAncDefColor 		  = creativeagency_opt('creativeagency_footer_widget_anchor_color') != '#9e9e9e' ? creativeagency_opt('creativeagency_footer_widget_anchor_color') : '';
+		$footerAncDefColor 		  = creativeagency_opt('creativeagency_footer_widget_anchor_color') != '#ffffff' ? creativeagency_opt('creativeagency_footer_widget_anchor_color') : '#00A7FF';
 		$footerAncDefHovColor 	  = $footerwanchorhovcolor != '#bababa' ? $footerwanchorhovcolor : $themeColor;
 
 		$customcss ="			
@@ -187,6 +188,10 @@ function creativeagency_common_custom_css(){
 			{
 			   color: {$menuColor};
 			}
+			.header-area .main-header-area .main-menu ul li a::before
+			{
+			   background: {$menuBorderColor};
+			}
 			.main_menu .main-menu-item ul li .nav-link:not(.dropdown-item):hover, .header-area .main-header-area .main-menu ul li  a.dropdown-item:hover, .main_menu:not(.menu_fixed) ul.navbar-nav > li > a:hover
 			{
 			   color: {$menuHoverColor};
@@ -289,20 +294,13 @@ function creativeagency_common_custom_css(){
 				color: {$whiteColor} !important;
 			}
 
-			.header-area .get_in_tauch a
+			.header-area .log_chat_area .say_hi
 			{
 				color: {$bookBtnColor};
-				border-color: {$bookBtnColor};
 			}
-			.header-area .get_in_tauch a:hover
+			.header-area .log_chat_area .say_hi:before
 			{
-				border-color: {$bookBtnHoverBgColor};
-				background: {$bookBtnHoverBgColor};
-			}
-			.header-area .main-header-area.sticky .boxed_btn_white
-			{
-				color: {$bookBtnHoverBgColor};
-				border-color: {$bookBtnHoverBgColor};
+				background: {$bookBtnBorderColor};
 			}
 			.slider_area .single_slider .slider_text a
 			{

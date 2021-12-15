@@ -196,8 +196,8 @@ function creativeagency_social_sharing_buttons( $ulClass = '', $tagLine = '' ) {
 	$content  .= '<ul class="'.esc_attr( $ulClass ).'">';
 	$content .= $tagLine;
 	$content .= '<li><a href="' . esc_url( $facebookURL ) . '" target="_blank"><i class="ti-facebook"></i></a></li>';
-	$content .= '<li><a href="' . esc_url( $twitterURL ) . '" target="_blank"><i class="ti-twitter-alt"></i></a></li>';
 	$content .= '<li><a href="' . esc_url( $pinterest ) . '" target="_blank"><i class="ti-pinterest"></i></a></li>';
+	$content .= '<li><a href="' . esc_url( $twitterURL ) . '" target="_blank"><i class="ti-twitter-alt"></i></a></li>';
 	$content .= '<li><a href="' . esc_url( $linkedin ) . '" target="_blank"><i class="ti-linkedin"></i></a></li>';
 	$content .= '</ul>';
 
@@ -636,6 +636,9 @@ function creativeagency_get_contact_details_area() {
 	<?php
 }
 
-
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+// Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
 
 ?>

@@ -18,23 +18,6 @@ class creativeagency_theme_customizer {
     // Customize register hook
 
     public function creativeagency_theme_customizer_options( $wp_customize ){
-
-        $wp_customize->add_setting( 'footer_logo', 
-            array(
-                'type' => 'theme_mod',
-                'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'absint'
-            ) 
-        ); // Add setting for image uploader
-            
-        // Add control for image uploader (actual uploader)
-        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'WP_Customize_Cropped_Image_Control', array(
-            'label' => __( 'Footer Logo', 'creativeagency' ),
-            'priority'  => 1,
-            'section' => 'creativeagency_footer_section',
-            'settings' => 'footer_logo',
-            ) ) 
-        );
         
         // Include files
         include( CREATIVE_AGENCY_DIR_PATH_INC. 'customizer/fields/sections.php' );
