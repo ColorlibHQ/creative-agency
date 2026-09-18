@@ -146,6 +146,6 @@ $collection = array(
     'section' => $sections,
 );
 
-Epsilon_Customizer::add_multiple( $collection );
+Colorlib_Customizer::add_multiple( $collection );
 
 ?>

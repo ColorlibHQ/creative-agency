@@ -27,7 +27,7 @@
 // );
 
 // Header button label
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_btn_text',
     array(
         'type'        => 'text',
@@ -39,7 +39,7 @@ Epsilon_Customizer::add_field(
 );
 
 // Header button URL
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_btn_url',
     array(
         'type'        => 'text',
@@ -51,10 +51,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header call button bg color
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_book_btn_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Header Anchor Color', 'creativeagency' ),
         'description' => esc_html__( 'Select the color.', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
@@ -64,10 +64,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header book button hover bg color
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_book_btn_border_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Header Anchor Border Color', 'creativeagency' ),
         'description' => esc_html__( 'Select the color.', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
@@ -77,10 +77,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header color sections
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'header_color_section',
     array(
-        'type'        => 'epsilon-separator',
+        'type'        => 'colorlib-separator',
         'label'       => esc_html__( 'Header Color Section', 'creativeagency' ),
         'section'     => 'creativeagency_header_section',
 
@@ -88,10 +88,10 @@ Epsilon_Customizer::add_field(
 );
  
 // Header background color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_bg_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Sticky Header BG Color', 'creativeagency' ),
         'description' => esc_html__( 'Select the header background color.', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
@@ -101,10 +101,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header nav menu color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_menu_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Header menu color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
@@ -113,10 +113,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header nav menu color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_menu_border_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Header menu Border color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
@@ -125,10 +125,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Header nav menu hover color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_header_menu_hover_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Header menu hover color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
@@ -137,10 +137,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Dropdown menu color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_dropdown_menu_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Dropdown menu color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
@@ -149,10 +149,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Dropdown menu hover color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_dropdown_menu_hover_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Dropdown menu hover color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_header_section',
@@ -165,7 +165,7 @@ Epsilon_Customizer::add_field(
  ***********************************/
  
 // Post excerpt length field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_excerpt_length',
     array(
         'type'        => 'text',
@@ -178,28 +178,28 @@ Epsilon_Customizer::add_field(
 );
 
 // Blog single page social share icon
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_blog_meta',
     array(
-        'type'        => 'epsilon-toggle',
+        'type'        => 'colorlib-toggle',
         'label'       => esc_html__( 'Blog page post meta show/hide', 'creativeagency' ),
         'section'     => 'creativeagency_blog_section',
         'default'     => true
     )
 );
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_like_btn',
     array(
-        'type'        => 'epsilon-toggle',
+        'type'        => 'colorlib-toggle',
         'label'       => esc_html__( 'Blog Single Page Like Button show/hide', 'creativeagency' ),
         'section'     => 'creativeagency_blog_section',
         'default'     => true
     )
 );
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_blog_share',
     array(
-        'type'        => 'epsilon-toggle',
+        'type'        => 'colorlib-toggle',
         'label'       => esc_html__( 'Blog Single Page Share show/hide', 'creativeagency' ),
         'section'     => 'creativeagency_blog_section',
         'default'     => true
@@ -212,7 +212,7 @@ Epsilon_Customizer::add_field(
  ***********************************/
 
 // 404 text #1 field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_fof_titleone',
     array(
         'type'              => 'text',
@@ -223,7 +223,7 @@ Epsilon_Customizer::add_field(
     )
 );
 // 404 text #2 field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_fof_titletwo',
     array(
         'type'              => 'text',
@@ -234,10 +234,10 @@ Epsilon_Customizer::add_field(
     )
 );
 // 404 text #1 color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_fof_textone_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( '404 Text #1 Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_fof_section',
@@ -245,10 +245,10 @@ Epsilon_Customizer::add_field(
     )
 );
 // 404 text #2 color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_fof_texttwo_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( '404 Text #2 Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_fof_section',
@@ -256,10 +256,10 @@ Epsilon_Customizer::add_field(
     )
 );
 // 404 background color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_fof_bg_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( '404 Page Background Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_fof_section',
@@ -272,10 +272,10 @@ Epsilon_Customizer::add_field(
  ***********************************/
 
 // Footer Widget section
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'footer_widget_separator',
     array(
-        'type'        => 'epsilon-separator',
+        'type'        => 'colorlib-separator',
         'label'       => esc_html__( 'Footer Widget Section', 'creativeagency' ),
         'section'     => 'creativeagency_footer_section',
 
@@ -283,10 +283,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget toggle field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_toggle',
     array(
-        'type'        => 'epsilon-toggle',
+        'type'        => 'colorlib-toggle',
         'label'       => esc_html__( 'Footer widget show/hide', 'creativeagency' ),
         'description' => esc_html__( 'Toggle to display footer widgets.', 'creativeagency' ),
         'section'     => 'creativeagency_footer_section',
@@ -295,10 +295,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer Copyright section
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_copyright_separator',
     array(
-        'type'        => 'epsilon-separator',
+        'type'        => 'colorlib-separator',
         'label'       => esc_html__( 'Footer Copyright Section', 'creativeagency' ),
         'section'     => 'creativeagency_footer_section',
         'default'     => true,
@@ -309,10 +309,10 @@ Epsilon_Customizer::add_field(
 // Footer copyright text field
 $url = 'https://colorlib.com/';
 $copyText = sprintf( __( 'Theme by %s colorlib %s Copyright &copy; %s  |  All rights reserved.', 'creativeagency' ), '<a target="_blank" href="' . esc_url( $url ) . '">', '</a>', date( 'Y' ) );
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_copyright_text',
     array(
-        'type'        => 'epsilon-text-editor',
+        'type'        => 'colorlib-text-editor',
         'label'       => esc_html__( 'Footer copyright text', 'creativeagency' ),
         'section'     => 'creativeagency_footer_section',
         'default'     => wp_kses_post( $copyText ),
@@ -320,10 +320,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget bg color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_bg_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Footer Widget Bg Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
@@ -332,10 +332,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget text color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_heading_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Footer Heading Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
@@ -344,10 +344,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget text color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_text_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Footer Text Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
@@ -356,10 +356,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget anchor color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_anchor_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Footer Anchor Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
@@ -368,10 +368,10 @@ Epsilon_Customizer::add_field(
 );
 
 // Footer widget anchor hover color field
-Epsilon_Customizer::add_field(
+Colorlib_Customizer::add_field(
     'creativeagency_footer_widget_anchor_hover_color',
     array(
-        'type'        => 'epsilon-color-picker',
+        'type'        => 'colorlib-color-picker',
         'label'       => esc_html__( 'Footer Anchor Hover Color', 'creativeagency' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'creativeagency_footer_section',
