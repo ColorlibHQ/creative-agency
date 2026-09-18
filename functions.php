@@ -115,3 +115,15 @@ require_once( CREATIVE_AGENCY_DIR_PATH_INC . 'class-epsilon-init-dashboard.php' 
  */
 
 $Creative_Agency = new Creative_Agency();
+
+/**
+ * Editor and markup support this theme predates.
+ */
+if ( ! function_exists( 'creativeagency_modern_supports' ) ) {
+	function creativeagency_modern_supports() {
+		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'editor-styles' );
+	}
+	add_action( 'after_setup_theme', 'creativeagency_modern_supports', 20 );
+}
