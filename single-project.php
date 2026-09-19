@@ -70,7 +70,7 @@ if( have_posts() ) {
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-5">
-                    <div class="live_view_btn text-right">
+                    <div class="live_view_btn text-end">
                         <a class="boxed_btn_round" href="<?php echo esc_url( $project_url )?>"><?php echo esc_html( 'Live View', 'creativeagency' );?></a>
                     </div>
                 </div>

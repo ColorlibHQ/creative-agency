@@ -7,7 +7,7 @@
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
-                    <div class="row align-items-center no-gutters">
+                    <div class="row align-items-center g-0">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <?php echo creativeagency_theme_logo( 'navbar-brand' );?>

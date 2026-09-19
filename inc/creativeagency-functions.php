@@ -229,7 +229,7 @@ if( ! function_exists('creativeagency_project_navigation') ) {
 				$nextPost = get_next_post();
 				?>
 				<div class="col-xl-6 col-md-6">
-					<div class="prev_design text-right">
+					<div class="prev_design text-end">
 						<div class="arrows">
 							<span><?php echo esc_html( 'Next', 'creativeagency' );?><i class="ti-arrow-right"></i></span>
 							
