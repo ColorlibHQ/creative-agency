@@ -261,20 +261,6 @@ final class Creative_Agency {
 					'in_footer'  => true,
 				),
 				array(
-					'handler'    => 'creativeagency-waypoints-js',
-					'file'       => $jsPath . 'waypoints.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-jquery-counterup-js',
-					'file'       => $jsPath . 'jquery.counterup.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
 					'handler'    => 'scrollIt-js',
 					'file'       => $jsPath . 'scrollIt.js',
 					'dependency' => array( 'jquery' ),
@@ -284,20 +270,6 @@ final class Creative_Agency {
 				array(
 					'handler'    => 'jquery-scrollUp-js',
 					'file'       => $jsPath . 'jquery.scrollUp.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-wow-js',
-					'file'       => $jsPath . 'wow.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-nice-select-js',
-					'file'       => $jsPath . 'nice-select.min.js',
 					'dependency' => array( 'jquery' ),
 					'version'    => '1.0',
 					'in_footer'  => true,
@@ -331,13 +303,6 @@ final class Creative_Agency {
 					'in_footer'  => true,
 				),
 				array(
-					'handler'    => 'jquery-instagramFeed-js',
-					'file'       => $jsPath . 'jquery.instagramFeed.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),		
-				array(
 					'handler'		=> 'creativeagency-post-like-js',
 					'file' 			=> $jsPath.'post-likes.js',
 					'dependency' 	=> array( 'jquery' ),
@@ -345,10 +310,17 @@ final class Creative_Agency {
 					'in_footer' 	=> true
 				),
 				array(
+					'handler'		=> 'creativeagency-ui-js',
+					'file' 			=> $jsPath.'colorlib-ui.js',
+					'dependency' 	=> array(),
+					'version' 		=> '2.1.1',
+					'in_footer' 	=> true
+				),
+				array(
 					'handler'    => 'creativeagency-custom-js',
 					'file'       => $jsPath . 'main.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => $this->creativeagency_version,
+					'dependency' => array( 'jquery', 'creativeagency-ui-js' ),
+					'version'    => $this->creativeagency_version . '-s1',
 					'in_footer'  => true,
 				),
 
