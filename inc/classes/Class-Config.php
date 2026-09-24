@@ -235,92 +235,22 @@ final class Creative_Agency {
 				array(
 					'handler'    => 'creativeagency-bootstrap-js',
 					'file'       => $jsPath . 'bootstrap.min.js',
-					'dependency' => array( 'jquery' ),
+					'dependency' => array(),
 					'version'    => '5.3.8-4',
 					'in_footer'  => true,
 				),
 				array(
-					'handler'    => 'creativeagency-magnific-popup-js',
-					'file'       => $jsPath . 'jquery.magnific-popup.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),	
-				array(
-					'handler'    => 'creativeagency-owl-carousel-js',
-					'file'       => $jsPath . 'owl.carousel.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-isotope-pkgd-js',
-					'file'       => $jsPath . 'isotope.pkgd.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'scrollIt-js',
-					'file'       => $jsPath . 'scrollIt.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'jquery-scrollUp-js',
-					'file'       => $jsPath . 'jquery.scrollUp.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-jquery-slicknav-js',
-					'file'       => $jsPath . 'jquery.slicknav.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-ajaxchimp-js',
-					'file'       => $jsPath . 'jquery.ajaxchimp.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),	
-				array(
-					'handler'    => 'creativeagency-plugins-js',
-					'file'       => $jsPath . 'plugins.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'    => 'creativeagency-gijgo-js',
-					'file'       => $jsPath . 'gijgo.min.js',
-					'dependency' => array( 'jquery' ),
-					'version'    => '1.0',
-					'in_footer'  => true,
-				),
-				array(
-					'handler'		=> 'creativeagency-post-like-js',
-					'file' 			=> $jsPath.'post-likes.js',
-					'dependency' 	=> array( 'jquery' ),
-					'version' 		=> '1.0',
-					'in_footer' 	=> true
-				),
-				array(
 					'handler'		=> 'creativeagency-ui-js',
-					'file' 			=> $jsPath.'colorlib-ui.js',
+					'file' 			=> $jsPath . ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'colorlib-ui.js' : 'colorlib-ui.min.js' ),
 					'dependency' 	=> array(),
-					'version' 		=> '2.1.1',
+					'version' 		=> '3.0.0',
 					'in_footer' 	=> true
 				),
 				array(
 					'handler'    => 'creativeagency-custom-js',
 					'file'       => $jsPath . 'main.js',
-					'dependency' => array( 'jquery', 'creativeagency-ui-js' ),
-					'version'    => $this->creativeagency_version . '-s1',
+					'dependency' => array( 'masonry', 'creativeagency-ui-js' ),
+					'version'    => $this->creativeagency_version . '-s2',
 					'in_footer'  => true,
 				),
 
@@ -419,7 +349,7 @@ final class Creative_Agency {
 		$had_elementor = get_option( 'creativeagency_had_elementor' );
 
 		if( $had_elementor == 'no' && self::check_elementor_preview_page() ){
-			wp_enqueue_script( 'creativeagency-elementor-notice', CREATIVE_AGENCY_DIR_JS_URI.'creativeagency-elementor-notice.js', array('jquery'), '1.0', true );
+			wp_enqueue_script( 'creativeagency-elementor-notice', CREATIVE_AGENCY_DIR_JS_URI.'creativeagency-elementor-notice.js', array( 'creativeagency-ui-js' ), '1.0-s2', true );
 			wp_localize_script(
 				'creativeagency-elementor-notice',
 				'creativeagencyElementorNotice',
