@@ -197,12 +197,6 @@ final class Creative_Agency {
 					'version'    => '1.0',
 				),
 				array(
-					'handler'    => 'creativeagency-gijgo-css',
-					'file'       => $cssPath . 'gijgo.css',
-					'dependency' => array(),
-					'version'    => '1.0',
-				),
-				array(
 					'handler'    => 'creativeagency-magnific-popup-css',
 					'file'       => $cssPath . 'magnific-popup.css',
 					'dependency' => array(),
