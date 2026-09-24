@@ -224,7 +224,7 @@ final class Creative_Agency {
 					'handler'    => 'creativeagency-main-style',
 					'file'       => $cssPath . 'style.css',
 					'dependency' => array(),
-					'version'    => $this->creativeagency_version,
+					'version'    => $this->creativeagency_version . '-s3',
 				),
 				array(
 					'handler' => 'creativeagency-style',
